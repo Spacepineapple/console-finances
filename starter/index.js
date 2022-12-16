@@ -91,16 +91,24 @@ let totalMonths = finances.length;
 let totalValue = 0;
 let change = 0;
 let greatestIncreasePeriod;
-let greatestIncreaseAmount;
+let greatestIncreaseAmount = 0;
 let greatestDecreasePeriod;
-let greatestDecreaseAmount;
+let greatestDecreaseAmount = 0;
 
 for (let record of finances) {
     totalValue+=record[1];
 }
 
 for (let i=1; i<finances.length; i++) {
-    change+=(finances[i][1]-finances[i-1][1]);
+    const monthlyChange = (finances[i][1]-finances[i-1][1]);
+    change+=monthlyChange;
+    if (greatestIncreaseAmount<monthlyChange) {
+        greatestIncreaseAmount = monthlyChange;
+        greatestIncreasePeriod = finances[i][0];
+    } else if (greatestDecreaseAmount>monthlyChange) {
+        greatestDecreaseAmount = monthlyChange;
+        greatestDecreasePeriod = finances[i][0];
+    }
 }
 
 let averageChange = change/totalMonths-1;
@@ -111,6 +119,6 @@ Financial Analysis
 Total Months: ${totalMonths}
 Total: ${totalValue}
 Average Change: ${averageChange}
-Greatest Increase in Profits: ${greatestIncreasePeriod} (${greatestIncreaseAmount})
-Greatest Decrease in Profits: ${greatestDecreasePeriod} (${greatestDecreaseAmount})
+Greatest Increase in Profits: ${greatestIncreasePeriod} ($${greatestIncreaseAmount})
+Greatest Decrease in Profits: ${greatestDecreasePeriod} ($${greatestDecreaseAmount})
 `);
