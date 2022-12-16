@@ -31,9 +31,12 @@ My task for this activity was to calculate:
 
 Finally, I was asked to log each of these values to the console in a specific
 format which matches the format that can be seen in the screenshot of the
-appearance of the page below.
+console below.
 
-The appearance of the page is as follows: 
+Due to the nature of this task, the page itself should appear as a blank white
+page. However, opening the console will display the following message: 
+
+![Screenshot of console output](./images/Screenshot.png)
 
 
 ## Installation <a id="installation"></a>
