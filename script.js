@@ -87,7 +87,12 @@ var finances = [
 ['Feb-2017', 671099]
 ];
 
+//Since each record is made up of a month and value, the total number of months
+//in the array will be the same as the length of the array.
 let totalMonths = finances.length;
+
+//Initialise the remaining required variables. Numerical variables will be used
+//for calculations so have been initialised with a value of 0 rather than undefined
 let totalValue = 0;
 let change = 0;
 let greatestIncreasePeriod;
@@ -95,22 +100,36 @@ let greatestIncreaseAmount = 0;
 let greatestDecreasePeriod;
 let greatestDecreaseAmount = 0;
 
+//Iterate through finances and sum values to get the total
 for (let record of finances) {
     totalValue+=record[1];
 }
 
+//Iterate through finances and calculate the difference between each month and
+//the previous month to identify the monthly change. Since we cannot accurately
+//calculate this for the first month, i starts at 1.
 for (let i=1; i<finances.length; i++) {
     const monthlyChange = (finances[i][1]-finances[i-1][1]);
     change+=monthlyChange;
+    //For each value, compare it to the existing greastestIncrease and
+    //greatestDecrease amounts.
     if (greatestIncreaseAmount<monthlyChange) {
         greatestIncreaseAmount = monthlyChange;
+        //As greatestIncreaseAmount is overwritten, updated
+        //greatestIncreasePeriod with the corresponding period
         greatestIncreasePeriod = finances[i][0];
     } else if (greatestDecreaseAmount>monthlyChange) {
         greatestDecreaseAmount = monthlyChange;
+        //As greatestIncreaseAmount is overwritten, updated
+        //greatestIncreasePeriod with the corresponding period
         greatestDecreasePeriod = finances[i][0];
     }
 }
 
+/*
+Divide the change calculated above by the number of months to get average
+change.
+*/
 let averageChange = change/totalMonths-1;
 
 console.log(`
