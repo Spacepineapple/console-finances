@@ -87,6 +87,14 @@ var finances = [
 ['Feb-2017', 671099]
 ];
 
+let totalMonths
+let totalValue
+let averageChange
+let greatestIncreasePeriod
+let greatestIncreaseAmount
+let greatestDecreasePeriod
+let greatestDecreaseAmount
+
 console.log(```
 Financial Analysis
 ----------------------------
