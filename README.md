@@ -41,9 +41,15 @@ page. However, opening the console will display the following message:
 
 ## Installation <a id="installation"></a>
 
-
+All of the required files are included in this repository and no installation
+should be required. The index.html file should render in any modern browser on
+both a desktop or mobile device. However, please note that due to the nature of
+this task, the page itself is blank and a user will need to open the console to
+see the output. 
 
 ## Usage <a id="usage"></a>
+
+
 
 ## Credits <a id="credits"></a>
 
