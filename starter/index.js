@@ -86,3 +86,13 @@ var finances = [
 ['Jan-2017', 138230],
 ['Feb-2017', 671099]
 ];
+
+console.log(```
+Financial Analysis
+----------------------------
+Total Months: ${totalMonths}
+Total: ${totalValue}
+Average Change: ${averageChange}
+Greatest Increase in Profits: ${greatestIncreasePeriod} (${greatestIncreaseAmount})
+Greatest Decrease in Profits: ${greatestDecreasePeriod} (${greatestDecreaseAmount})
+```)
