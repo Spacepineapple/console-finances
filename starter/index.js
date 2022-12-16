@@ -89,7 +89,7 @@ var finances = [
 
 let totalMonths = finances.length
 let totalValue = 0
-let averageChange
+let averageChange = totalValue/(totalMonths-1)
 let greatestIncreasePeriod
 let greatestIncreaseAmount
 let greatestDecreasePeriod
@@ -98,6 +98,12 @@ let greatestDecreaseAmount
 for (let record of finances) {
     totalValue+=record[1]
 }
+
+/*
+for (let i=1; i<finances.length; i++) {
+
+}
+*/
 
 console.log(`
 Financial Analysis
