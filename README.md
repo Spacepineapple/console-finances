@@ -43,13 +43,22 @@ page. However, opening the console will display the following message:
 
 All of the required files are included in this repository and no installation
 should be required. The index.html file should render in any modern browser on
-both a desktop or mobile device. However, please note that due to the nature of
-this task, the page itself is blank and a user will need to open the console to
-see the output. 
+both a desktop or mobile device. 
 
 ## Usage <a id="usage"></a>
 
+Due to the nature of this task, the page itself is blank and a user will need to open the console to
+see the output. Depending on the browser, this can be achieved using the
+following key combinations:
 
+* Chrome: Ctrl+Shift+J on Windows/Linux or Option+Clover+J on Mac
+* Edge: Ctrl+Shift+i
+* Firefox: Ctrl+Shift+J on Windows/Linux or Shift+Clover+J on Mac
+* Safari: Option+Clover+C. Please note that you may need to enable this option
+  through the advanced tab of the preferences menu.
 
 ## Credits <a id="credits"></a>
+
+This project was completed by myself -- Neal Reeves. The index.html file and
+finances array were provided by edX as part of their Front End Web Development bootcamp.
 
