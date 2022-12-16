@@ -130,7 +130,7 @@ for (let i=1; i<finances.length; i++) {
 Divide the change calculated above by the number of months to get average
 change.
 */
-let averageChange = change/totalMonths-1;
+let averageChange = change/(totalMonths-1);
 
 console.log(`
 Financial Analysis
