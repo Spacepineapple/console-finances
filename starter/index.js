@@ -87,15 +87,19 @@ var finances = [
 ['Feb-2017', 671099]
 ];
 
-let totalMonths
-let totalValue
+let totalMonths = finances.length
+let totalValue = 0
 let averageChange
 let greatestIncreasePeriod
 let greatestIncreaseAmount
 let greatestDecreasePeriod
 let greatestDecreaseAmount
 
-console.log(```
+for (let record of finances) {
+    totalValue+=record[1]
+}
+
+console.log(`
 Financial Analysis
 ----------------------------
 Total Months: ${totalMonths}
@@ -103,4 +107,4 @@ Total: ${totalValue}
 Average Change: ${averageChange}
 Greatest Increase in Profits: ${greatestIncreasePeriod} (${greatestIncreaseAmount})
 Greatest Decrease in Profits: ${greatestDecreasePeriod} (${greatestDecreaseAmount})
-```)
+`)
